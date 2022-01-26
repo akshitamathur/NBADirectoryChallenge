@@ -1,0 +1,100 @@
+<!-- <h2>Team Details</h2>
+
+    
+    <a href="/#/players/"> View All Players</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Team Logo</th>
+            <th>Team Name</th>
+            <th>Team Division</th>
+            <th>Team City</th>
+            <th>Conference</th>
+            <th>Division</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img height="100" width="100" src="{{team.logoUrl}}"/></td>
+            <td>{{team.fullName}}</td>
+            <td>{{team.division}}</td>
+            <td>{{team.city}}</td>
+            <td>{{team.conference}}</td>
+            <td>{{team.division}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h2>Players On the Team</h2>
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Position</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of filteredPlayers">
+            <td>{{player.firstName}}</td>
+            <td>{{player.lastName}}</td>
+            <td>{{player.position}}</td>
+        </tr>
+    </tbody>
+</table> -->
+
+
+<!-- Title -->
+<div class="container animate__animated animate__fadeInDown">
+<h1>Team Details</h1>
+</div>
+
+<!-- Description Paragraph -->
+<div class="container animate__animated animate__fadeInDown">
+    <p class="description">Below are the details for the team, as well as a list of the players on the team.</p>
+</div>
+
+
+<div class="container-fluid">
+    <div class="card animate__animated animate__fadeIn__delay-3s">
+        <div class="card-horizontal">
+            <img class="card-img-top animate__animated animate__fadeIn" src="{{team.logoUrl}}" alt="Team Logo On Card">
+                <div class="card-body animate__animated animate__fadeIn">
+                    <p class="card-text team-name">{{team.fullName}}</p>
+                    <p class="card-text">Abbreviation: {{team.abbreviation}}</p>
+                    <p class="card-text">City: {{team.city}}</p>
+                    <p class="card-text">Division: {{team.division}}</p>
+                    <p class="card-text">Conference: {{team.conference}}</p>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="container animate__animated animate__fadeInDown">
+<h3>Team Players</h3>
+</div>
+
+<div class="categories">
+    <table class="animate__animated animate__fadeInUp">
+        <thead>
+        <tr>
+            <th>Player Name</th>
+            <th>Position</th>
+            <th>Height (Inches)</th>
+            <th>Weight (lbs)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of filteredPlayers">
+            <td><p>{{player.firstName}} <b>{{player.lastName}}</b></p></td>
+            <td>{{player.position}}</td>
+            <td>{{player.heightInches}}</td>
+            <td>{{player.weightPounds}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+

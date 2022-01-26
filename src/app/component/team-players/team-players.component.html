@@ -1,0 +1,68 @@
+<!-- 
+<h2>NBA Players</h2>
+
+<button (click)="sortHeight()">Height</button>
+<button (click)="sortWeight()">Weight</button>
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Position</th>
+            <th>Height In Inches</th>
+            <th>Weight In Pounds</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of players">
+            <td>{{player.firstName}}</td>
+            <td>{{player.lastName}}</td>
+            <td>{{player.position}}</td>
+            <td>{{player.heightInches}}</td>
+            <td>{{player.weightPounds}}</td>
+        </tr>
+    </tbody>
+</table> -->
+
+
+
+<div class="container animate__animated animate__fadeInDown">
+<h1>NBA Players</h1>
+</div>
+
+<!-- Description Paragraph -->
+<div class="container animate__animated animate__fadeInDown">
+    <p class="description">Listed below, you will find all the current players in the NBA. You can use the sort by filters to sort the players by their height, or their weight.</p>
+</div>
+
+<div class="container animate__animated animate__fadeInDown">
+    <p class="filters">Sort By:</p> 
+
+        <button class="btn btn-danger" (click)="sortHeight()">Height</button>
+        <button class="btn btn-danger" (click)="sortWeight()">Weight</button>
+   
+</div>
+
+<div class="categories">
+    <table class="animate__animated animate__fadeInUp__delay-5s">
+        <thead>
+        <tr>
+            <th>Player Name</th>
+            <th>Position</th>
+            <th>Height (Inches)</th>
+            <th>Weight (lbs)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let player of players">
+            <td><p>{{player.firstName}} <b>{{player.lastName}}</b></p></td>
+            <td>{{player.position}}</td>
+            <td>{{player.heightInches}}</td>
+            <td>{{player.weightPounds}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+    

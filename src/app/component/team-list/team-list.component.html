@@ -1,0 +1,73 @@
+<!-- <h2>NBA Teams</h2>
+
+<a href="/#/players/"> View All Players</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Team Name</th>
+            <th>City Name</th>
+            <th>Team Division</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let team of teams">
+            <td><a routerLink="/details/{{team.id}}">{{team.name}}</a></td>
+            <td>{{team.city}}</td>
+            <td>{{team.division}}</td>
+        </tr>
+    </tbody>
+</table> -->
+
+<!-- Title -->
+<div class="container animate__animated animate__fadeInDown">
+<h1>NBA Teams </h1>
+</div>
+
+<!-- Description Paragraph -->
+<div class="container animate__animated animate__fadeInDown">
+    <p class="description">Listed below, you will find a list of all the current teams in the NBA. To learn more about the team, please click the team logo.</p>
+</div>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Teams in Left Div -->
+        <div class="col-6 animate__animated animate__fadeInUp">
+            <div *ngFor="let team of teams; let i = index;">
+                <div *ngIf="i % 2 == 0">
+                    <div class="card">
+                        <div class="card-horizontal">
+                            <a routerLink="/details/{{team.id}}"><img class="card-img-top animate__animated animate__fadeIn" src="{{teams[i].logoUrl}}" alt="Team Logo On Card"></a>
+                                <div class="card-body animate__animated animate__fadeIn">
+                                    <p class="card-text team-name">{{teams[i].name}}</p>
+                                    <p class="card-text">{{teams[i].city}}</p>
+                                    <p class="card-text">{{teams[i].division}}</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Teams in Right Div -->
+        <div class="col-6 animate__animated animate__fadeInUp">
+            <div *ngFor="let team of teams; let i = index;">
+                <div *ngIf="i % 2 == 0">
+                    <div class="card">
+                        <div class="card-horizontal">
+                            <a routerLink="/details/{{team.id + 1}}"><img class="card-img-top animate__animated animate__fadeIn" src="{{teams[i+1].logoUrl}}" alt="Team Logo On Card"></a>
+                                <div class="card-body animate__animated animate__fadeIn">
+                                    <p class="card-text team-name">{{teams[i+1].name}}</p>
+                                    <p class="card-text">{{teams[i+1].city}}</p>
+                                    <p class="card-text">{{teams[i+1].division}}</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

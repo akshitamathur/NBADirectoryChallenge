@@ -1,0 +1,52 @@
+button{
+	background-color: #C9082A;
+	border-radius: 2em;
+	margin-left: 0.5em;
+}
+
+button:focus{
+	background-color: #17408B;
+}
+
+.description{
+	font-size: 1.25em;
+}
+
+.filters{
+	padding-top: 1em;
+}
+
+.categories{
+	width: 100%;
+	height: 2em;
+	background-color: white;
+	margin-top: 2em;
+	opacity: 0.9;
+	border-radius: 0.5em;
+}
+
+th{
+	color: black;
+	text-align: center;
+}
+
+table{
+    width: 100%;
+    border-collapse:collapse;
+    table-layout: fixed
+}
+
+tbody{
+	table-layout: fixed;
+	text-align: center;
+}
+
+tr{
+	margin-top: 5em;
+	vertical-align: middle;
+}
+
+thead, tbody, tfoot, tr, td, th{
+	border-width: 2px;
+    vertical-align: middle;
+}

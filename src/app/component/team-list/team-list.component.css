@@ -1,0 +1,28 @@
+.card{
+	width: 20em;
+	height: 10em;
+	margin: 1.5em 1.5em 3em 7em;
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+.card-text{
+	color:  black;
+	text-align: center;
+}
+.team-name{
+	font-size: 1.5em;
+
+}
+.card-img-top{
+	height: 10em;
+	width: 10em;
+}
+
+.description{
+	font-size: 1.25em;
+	background-color: black;
+}
+
